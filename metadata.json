@@ -1,0 +1,7 @@
+{
+  "name": "GOGOマーリン - IT特化型就労支援",
+  "description": "栃木県宇都宮市のIT系就労継続支援・就労移行支援事業所「GOGOマーリン」の公式サイト。デジタルでスタイリッシュなデザインで、個々の可能性を広げるサポートを提供します。",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
