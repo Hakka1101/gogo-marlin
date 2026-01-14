@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Service: React.FC = () => {
@@ -50,10 +49,10 @@ const Service: React.FC = () => {
           <div className="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -ml-20 -mt-20"></div>
           <h2 className="text-3xl font-bold text-center mb-16 relative z-10">学べるITスキル</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 relative z-10">
-            <SkillCard title="Web Design" desc="Figma / Ps / Ai" />
-            <SkillCard title="Developing" desc="HTML / CSS / JS" />
-            <SkillCard title="Office" desc="Word / Excel / PPT" />
-            <SkillCard title="Creative" desc="Video / Illustration" />
+            <SkillCard title="Web Design" desc="Figma / Ps / Ai" icon="🎨" />
+            <SkillCard title="Developing" desc="HTML / CSS / JS" icon="💻" />
+            <SkillCard title="Office" desc="Word / Excel / GAS" icon="📊" />
+            <SkillCard title="Game Unity" desc="Unity / Blender / C#" icon="🎮" />
           </div>
         </div>
       </div>
@@ -70,10 +69,10 @@ const ServiceItem: React.FC<{ text: string }> = ({ text }) => (
   </li>
 );
 
-const SkillCard: React.FC<{ title: string; desc: string }> = ({ title, desc }) => (
+const SkillCard: React.FC<{ title: string; desc: string; icon: string }> = ({ title, desc, icon }) => (
   <div className="text-center group cursor-default">
-    <div className="mb-4 bg-white/10 aspect-square rounded-3xl flex items-center justify-center backdrop-blur-sm group-hover:bg-white/20 transition-all border border-white/20 shadow-inner">
-      <span className="text-3xl font-bold">{title.charAt(0)}</span>
+    <div className="mb-4 bg-white/10 aspect-square rounded-3xl flex items-center justify-center backdrop-blur-sm group-hover:bg-white/20 transition-all border border-white/20 shadow-inner overflow-hidden">
+      <span className="text-6xl">{icon}</span>
     </div>
     <h4 className="text-xl font-bold mb-2">{title}</h4>
     <p className="text-white/60 text-sm font-light">{desc}</p>

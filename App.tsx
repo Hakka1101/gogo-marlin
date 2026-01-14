@@ -7,7 +7,6 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Service from './pages/Service';
 import Contact from './pages/Contact';
-import Consultation from './pages/Consultation';
 import { AccessibilityProvider } from './context/AccessibilityContext';
 
 const ScrollToTop = () => {
@@ -21,17 +20,20 @@ const ScrollToTop = () => {
 const AppContent: React.FC = () => {
   return (
     <div className="flex flex-col min-h-screen">
-      <AccessibilityToolbar />
-      <Navbar />
+      <header className="sticky top-0 z-50">
+        <AccessibilityToolbar />
+        <Navbar />
+      </header>
+      
       <main className="flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/service" element={<Service />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/consultation" element={<Consultation />} />
         </Routes>
       </main>
+      
       <Footer />
     </div>
   );

@@ -20,10 +20,14 @@
         }
         .text-brand { color: #287580; }
         .bg-brand { background-color: #287580; }
-        .border-brand { border-color: #287580; }
         .bg-brand-light { background-color: #f0f7f8; }
-        .gradient-brand {
-            background: linear-gradient(135deg, #287580 0%, #4a9eab 100%);
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out forwards;
         }
     </style>
 <script type="importmap">
@@ -39,5 +43,6 @@
 </head>
 <body class="bg-white text-gray-900 selection:bg-[#287580] selection:text-white antialiased">
     <div id="root"></div>
+    <script type="module" src="index.tsx"></script>
 </body>
 </html>
