@@ -26,9 +26,28 @@
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
+        
+        @keyframes revealUp {
+            0% { transform: translateY(100%); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
         .animate-fadeInUp {
             animation: fadeInUp 0.8s ease-out forwards;
         }
+
+        .animate-reveal {
+            display: block;
+            overflow: hidden;
+        }
+        .animate-reveal > span {
+            display: block;
+            animation: revealUp 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+        }
+        
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
     </style>
 <script type="importmap">
 {

@@ -8,17 +8,28 @@ const Home: React.FC = () => {
       <section className="relative min-h-[90vh] flex items-center bg-white">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-[#f0f7f8] -z-10 hidden lg:block rounded-l-[100px]"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center py-16">
-          <div className="animate-fadeInUp">
-            <h2 className="text-[#287580] font-bold tracking-widest text-xs mb-6 uppercase border-l-4 border-[#287580] pl-4">IT-Focused Employment Support</h2>
+          <div className="z-10">
+            <div className="animate-reveal mb-6">
+              <span className="text-[#287580] font-bold tracking-widest text-xs uppercase border-l-4 border-[#287580] pl-4 inline-block">IT-Focused Employment Support</span>
+            </div>
+            
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-8 text-gray-900 tracking-tight">
-              デジタルの力で、<br />
-              <span className="text-[#287580]">未来をデザイン。</span>
+              <div className="animate-reveal mb-2">
+                <span className="delay-100">デジタルの力で、</span>
+              </div>
+              <div className="animate-reveal">
+                <span className="text-[#287580] delay-300">未来をデザイン。</span>
+              </div>
             </h1>
-            <p className="text-lg text-gray-600 mb-10 max-w-lg leading-relaxed font-medium">
-              栃木県宇都宮市を拠点とするIT特化型の就労支援事業所。<br />
-              Webデザイン、プログラミング、事務スキルなど、あなたの「やりたい」を形にするクリエイティブな場所です。
-            </p>
-            <div className="flex flex-col sm:flex-row gap-5">
+            
+            <div className="animate-reveal mb-10 overflow-hidden">
+              <p className="text-lg text-gray-600 max-w-lg leading-relaxed font-medium delay-500 opacity-0 animate-fadeInUp">
+                栃木県宇都宮市を拠点とするIT特化型の就労支援事業所。<br />
+                Webデザイン、プログラミング、事務スキルなど、あなたの「やりたい」を形にするクリエイティブな場所です。
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-5 opacity-0 animate-fadeInUp" style={{ animationDelay: '0.8s', animationFillMode: 'forwards' }}>
               <Link
                 to="/contact"
                 className="inline-flex items-center justify-center px-10 py-5 bg-[#287580] text-white font-bold rounded-3xl hover:bg-[#1e5a63] transition-all transform hover:-translate-y-1 shadow-xl shadow-[#287580]/20"
@@ -36,12 +47,12 @@ const Home: React.FC = () => {
               </Link>
             </div>
           </div>
-          <div className="relative animate-fadeInUp">
-            <div className="aspect-square bg-gray-100 rounded-[50px] overflow-hidden shadow-2xl rotate-2 transform hover:rotate-0 transition-transform duration-1000">
+          <div className="relative opacity-0 animate-fadeInUp" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
+            <div className="aspect-square bg-gray-100 rounded-[50px] overflow-hidden rotate-2 transform hover:rotate-0 transition-transform duration-1000">
               <img
                 src="images/女性がPCの前に座りこちらに向かって笑っている.jpg" 
                 alt="スタッフ"
-                className="w-full h-full object-cover border-none"
+                className="w-full h-full object-cover"
               />
             </div>
           </div>
@@ -52,22 +63,25 @@ const Home: React.FC = () => {
       <section className="py-32 bg-[#f0f7f8] relative overflow-hidden">
         <div className="absolute top-0 right-0 w-64 h-64 bg-white/40 rounded-full blur-3xl -mr-32 -mt-32"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
+          <div className="text-center mb-20 opacity-0 animate-fadeInUp">
             <h2 className="text-4xl font-bold mb-6 tracking-tight">GOGOマーリンの3つの強み</h2>
             <p className="text-gray-500 font-medium">デジタルの知識は、あなたの世界を広げる強力な武器になります。</p>
           </div>
           <div className="grid md:grid-cols-3 gap-10">
             <FeatureCard
+              delay="0.1s"
               icon={<svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>}
               title="実践的なITカリキュラム"
               description="デザイン・開発・事務。現場で求められるスキルを、現役レベルの指導員が丁寧にサポートします。"
             />
             <FeatureCard
+              delay="0.3s"
               icon={<svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>}
               title="安心の個別サポート"
               description="体調や心の状態に合わせ、無理のないペースで進められる個別支援計画を策定します。"
             />
             <FeatureCard
+              delay="0.5s"
               icon={<svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>}
               title="自分らしく働ける空間"
               description="最新PCと使いやすいデスク。クリエイティブな発想が生まれる、快適なオフィス環境をご提供。"
@@ -80,7 +94,7 @@ const Home: React.FC = () => {
       <section className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
-            <div className="space-y-10 order-2 lg:order-1">
+            <div className="space-y-10 order-2 lg:order-1 opacity-0 animate-fadeInUp">
               <div className="space-y-6">
                 <h2 className="text-4xl font-bold leading-tight text-gray-900">集中と対話が両立する、<br /><span className="text-[#287580]">洗練されたワークスペース</span></h2>
                 <p className="text-gray-600 leading-loose text-lg font-medium">
@@ -89,20 +103,20 @@ const Home: React.FC = () => {
                   あなたの感性を刺激する環境が整っています。
                 </p>
               </div>
-              <div className="rounded-[40px] overflow-hidden shadow-2xl h-64 border-none">
+              <div className="rounded-[40px] overflow-hidden h-64 border-none shadow-none">
                 <img 
                   src="images/事業所入り口.jpg" 
-                  alt="ミーティングスペース" 
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700 border-none"
+                  alt="事業所入り口" 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 />
               </div>
             </div>
-            <div className="order-1 lg:order-2">
-              <div className="rounded-[60px] overflow-hidden shadow-2xl aspect-[4/5] border-none">
+            <div className="order-1 lg:order-2 opacity-0 animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
+              <div className="rounded-[60px] overflow-hidden aspect-[4/5] border-none shadow-none">
                 <img 
                   src="images/事業所内部入り口から見た写真.jpg" 
                   alt="オフィス内部" 
-                  className="w-full h-full object-cover border-none"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>
@@ -113,7 +127,7 @@ const Home: React.FC = () => {
       {/* CTA Section */}
       <section className="py-32 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-[#287580] rounded-[60px] p-12 md:p-24 text-center text-white relative overflow-hidden shadow-2xl shadow-cyan-900/40">
+          <div className="bg-[#287580] rounded-[60px] p-12 md:p-24 text-center text-white relative overflow-hidden shadow-2xl shadow-cyan-900/40 opacity-0 animate-fadeInUp">
             <div className="absolute top-0 right-0 -mr-32 -mt-32 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
             <div className="absolute bottom-0 left-0 -ml-32 -mb-32 w-80 h-80 bg-black/10 rounded-full blur-3xl"></div>
             <div className="relative z-10">
@@ -144,8 +158,11 @@ const Home: React.FC = () => {
   );
 };
 
-const FeatureCard: React.FC<{ icon: React.ReactNode; title: string; description: string }> = ({ icon, title, description }) => (
-  <div className="bg-white p-12 rounded-[40px] border border-gray-100 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group flex flex-col h-full">
+const FeatureCard: React.FC<{ icon: React.ReactNode; title: string; description: string, delay?: string }> = ({ icon, title, description, delay }) => (
+  <div 
+    className="bg-white p-12 rounded-[40px] border border-gray-100 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group flex flex-col h-full opacity-0 animate-fadeInUp"
+    style={{ animationDelay: delay, animationFillMode: 'forwards' }}
+  >
     <div className="w-20 h-20 bg-[#f0f7f8] text-[#287580] rounded-[24px] flex items-center justify-center mb-8 group-hover:bg-[#287580] group-hover:text-white transition-all duration-500 shadow-sm">
       {icon}
     </div>

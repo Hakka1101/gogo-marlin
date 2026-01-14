@@ -4,7 +4,7 @@ const Service: React.FC = () => {
   return (
     <div className="pt-32 pb-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 opacity-0 animate-fadeInUp">
           <h1 className="text-4xl font-bold mb-4 text-gray-900">サービス内容</h1>
           <div className="w-20 h-1.5 bg-[#287580] mx-auto rounded-full"></div>
           <p className="mt-6 text-gray-500 max-w-2xl mx-auto">
@@ -15,7 +15,7 @@ const Service: React.FC = () => {
 
         {/* Support Types */}
         <div className="grid md:grid-cols-2 gap-12 mb-24">
-          <div className="bg-white p-10 rounded-[40px] border-2 border-[#f0f7f8] shadow-xl hover:shadow-[#287580]/5 transition-all relative overflow-hidden group">
+          <div className="bg-white p-10 rounded-[40px] border-2 border-[#f0f7f8] shadow-xl hover:shadow-[#287580]/5 transition-all relative overflow-hidden group opacity-0 animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
             <div className="absolute top-0 right-0 bg-[#287580] text-white px-8 py-2 rounded-bl-3xl font-bold">就労継続支援A型</div>
             <h3 className="text-2xl font-bold mb-6 text-gray-900">働く喜びを実感しながら<br /><span className="text-[#287580]">スキルアップ</span></h3>
             <p className="text-gray-600 mb-8 leading-relaxed">
@@ -29,7 +29,7 @@ const Service: React.FC = () => {
             </ul>
           </div>
 
-          <div className="bg-[#f0f7f8] p-10 rounded-[40px] shadow-xl hover:shadow-[#287580]/5 transition-all relative overflow-hidden group">
+          <div className="bg-[#f0f7f8] p-10 rounded-[40px] shadow-xl hover:shadow-[#287580]/5 transition-all relative overflow-hidden group opacity-0 animate-fadeInUp" style={{ animationDelay: '0.4s' }}>
             <div className="absolute top-0 right-0 bg-white text-[#287580] px-8 py-2 rounded-bl-3xl font-bold border-l border-b border-[#287580]/10">就労移行支援</div>
             <h3 className="text-2xl font-bold mb-6 text-gray-900">一般企業への就職を<br /><span className="text-[#287580]">トータルサポート</span></h3>
             <p className="text-gray-600 mb-8 leading-relaxed">
@@ -45,7 +45,7 @@ const Service: React.FC = () => {
         </div>
 
         {/* Skill Matrix */}
-        <div className="bg-[#287580] rounded-[60px] p-12 md:p-20 text-white relative overflow-hidden shadow-2xl">
+        <div className="bg-[#287580] rounded-[60px] p-12 md:p-20 text-white relative overflow-hidden shadow-2xl opacity-0 animate-fadeInUp" style={{ animationDelay: '0.6s' }}>
           <div className="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -ml-20 -mt-20"></div>
           <h2 className="text-3xl font-bold text-center mb-16 relative z-10">学べるITスキル</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 relative z-10">
@@ -72,7 +72,7 @@ const ServiceItem: React.FC<{ text: string }> = ({ text }) => (
 const SkillCard: React.FC<{ title: string; desc: string; icon: string }> = ({ title, desc, icon }) => (
   <div className="text-center group cursor-default">
     <div className="mb-4 bg-white/10 aspect-square rounded-3xl flex items-center justify-center backdrop-blur-sm group-hover:bg-white/20 transition-all border border-white/20 shadow-inner overflow-hidden">
-      <span className="text-6xl">{icon}</span>
+      <span className="text-8xl transform group-hover:scale-110 transition-transform">{icon}</span>
     </div>
     <h4 className="text-xl font-bold mb-2">{title}</h4>
     <p className="text-white/60 text-sm font-light">{desc}</p>
