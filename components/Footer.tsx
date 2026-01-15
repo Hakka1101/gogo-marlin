@@ -67,8 +67,8 @@ const Footer: React.FC = () => {
         <div className="pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center text-gray-400 text-xs">
           <p>© 2023 GOGOマーリン. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-gray-600 transition-colors">Privacy Policy</a>
-            <Link to="/about" className="hover:text-gray-600 transition-colors underline decoration-[#287580]/30">アクセシビリティについて</Link>
+            <Link to="/privacy" className="hover:text-gray-600 transition-colors">Privacy Policy</Link>
+            <Link to="/accessibility-policy" className="hover:text-gray-600 transition-colors underline decoration-[#287580]/30">ウェブアクセシビリティ方針</Link>
           </div>
         </div>
       </div>

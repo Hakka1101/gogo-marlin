@@ -136,18 +136,12 @@ const Home: React.FC = () => {
                 見学や体験利用、個別のご相談はいつでも大歓迎です。<br />
                 まずはあなたの「やってみたい」を聞かせてください。
               </p>
-              <div className="flex flex-col sm:flex-row justify-center gap-6">
+              <div className="flex justify-center">
                 <Link
                   to="/contact"
-                  className="inline-block bg-white text-[#287580] px-12 py-5 rounded-full font-bold text-lg hover:bg-gray-100 transition-all shadow-xl transform hover:scale-105"
+                  className="inline-block bg-white text-[#287580] px-16 py-6 rounded-full font-bold text-xl hover:bg-gray-100 transition-all shadow-xl transform hover:scale-105"
                 >
                   見学・相談を予約する
-                </Link>
-                <Link
-                  to="/contact"
-                  className="inline-block border-2 border-white/40 text-white px-12 py-5 rounded-full font-bold text-lg hover:bg-white/10 transition-all"
-                >
-                  お問い合わせ
                 </Link>
               </div>
             </div>

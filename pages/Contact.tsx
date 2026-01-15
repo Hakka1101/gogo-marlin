@@ -10,8 +10,6 @@ const Contact: React.FC = () => {
       .catch(err => console.error(err));
   }, []);
 
-  const googleFormEmbedUrl = metadata?.googleFormUrl || "https://docs.google.com/forms/d/e/1FAIpQLScmA7v6zN8m9U5T6v_m_V2L8V_placeholder/viewform?embedded=true";
-
   return (
     <div className="pt-24 pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -31,19 +29,19 @@ const Contact: React.FC = () => {
               <h3 className="text-2xl font-bold mb-8 text-[#287580]">連絡先</h3>
               <div className="space-y-8">
                 <ContactInfoItem 
-                  icon={<svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>}
+                  icon={<svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>}
                   label="電話番号"
                   value={metadata?.contactInfo?.tel || "028-XXX-XXXX"}
                   sub={`受付時間：${metadata?.contactInfo?.hours || "平日 10:00 - 18:00"}`}
                 />
                 <ContactInfoItem 
-                  icon={<svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>}
+                  icon={<svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>}
                   label="メール"
                   value={metadata?.contactInfo?.email || "info@gogomarlin.com"}
                   sub="24時間受付中"
                 />
                 <ContactInfoItem 
-                  icon={<svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>}
+                  icon={<svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>}
                   label="所在地"
                   value={metadata?.contactInfo?.address || "栃木県宇都宮市京町5-17"}
                   sub="宇都宮駅よりアクセス可能"
@@ -52,19 +50,39 @@ const Contact: React.FC = () => {
             </div>
           </div>
 
-          {/* Google Form Embed */}
-          <div className="lg:col-span-3 bg-white rounded-[40px] shadow-xl overflow-hidden border border-gray-100 min-h-[800px] opacity-0 animate-fadeInUp" style={{ animationDelay: '0.4s' }}>
-            <iframe 
-              src={googleFormEmbedUrl}
-              width="100%" 
-              height="800" 
-              frameBorder="0" 
-              marginHeight={0} 
-              marginWidth={0}
-              title="Googleお問い合わせフォーム"
-            >
-              読み込んでいます…
-            </iframe>
+          {/* Netlify Form */}
+          <div className="lg:col-span-3 bg-white p-8 md:p-12 rounded-[40px] shadow-xl border border-gray-100 opacity-0 animate-fadeInUp" style={{ animationDelay: '0.4s' }}>
+            <form name="contact" method="POST" data-netlify="true" className="space-y-6">
+              <input type="hidden" name="form-name" value="contact" />
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-sm font-bold text-gray-700 mb-2">お名前 <span className="text-red-500">*</span></label>
+                  <input type="text" name="name" required className="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-[#287580] focus:outline-none transition-all" placeholder="山田 太郎" />
+                </div>
+                <div>
+                  <label className="block text-sm font-bold text-gray-700 mb-2">ふりがな</label>
+                  <input type="text" name="kana" className="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-[#287580] focus:outline-none transition-all" placeholder="やまだ たろう" />
+                </div>
+              </div>
+              <div>
+                <label className="block text-sm font-bold text-gray-700 mb-2">メールアドレス <span className="text-red-500">*</span></label>
+                <input type="email" name="email" required className="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-[#287580] focus:outline-none transition-all" placeholder="example@mail.com" />
+              </div>
+              <div>
+                <label className="block text-sm font-bold text-gray-700 mb-2">お問い合わせ内容</label>
+                <select name="type" className="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-[#287580] focus:outline-none transition-all mb-4">
+                  <option value="見学希望">見学・体験を希望</option>
+                  <option value="相談希望">相談のみを希望</option>
+                  <option value="資料請求">資料請求</option>
+                  <option value="その他">その他</option>
+                </select>
+                <textarea name="message" rows={5} required className="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-[#287580] focus:outline-none transition-all" placeholder="現在の状況や、気になることなどご自由にご記入ください。"></textarea>
+              </div>
+              <button type="submit" className="w-full py-5 bg-[#287580] text-white font-bold rounded-2xl hover:bg-[#1e5a63] transition-all transform hover:shadow-xl flex items-center justify-center space-x-2">
+                <span>送信する</span>
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+              </button>
+            </form>
           </div>
         </div>
 

@@ -7,6 +7,8 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Service from './pages/Service';
 import Contact from './pages/Contact';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import AccessibilityPolicy from './pages/AccessibilityPolicy';
 import { AccessibilityProvider } from './context/AccessibilityContext';
 
 const ScrollToTop = () => {
@@ -31,6 +33,8 @@ const AppContent: React.FC = () => {
           <Route path="/about" element={<About />} />
           <Route path="/service" element={<Service />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/accessibility-policy" element={<AccessibilityPolicy />} />
         </Routes>
       </main>
       

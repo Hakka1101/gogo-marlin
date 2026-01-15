@@ -49,10 +49,42 @@ const Service: React.FC = () => {
           <div className="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -ml-20 -mt-20"></div>
           <h2 className="text-3xl font-bold text-center mb-16 relative z-10">学べるITスキル</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 relative z-10">
-            <SkillCard title="Web Design" desc="Figma / Ps / Ai" icon="🎨" />
-            <SkillCard title="Developing" desc="HTML / CSS / JS" icon="💻" />
-            <SkillCard title="Office" desc="Word / Excel / GAS" icon="📊" />
-            <SkillCard title="Game Unity" desc="Unity / Blender / C#" icon="🎮" />
+            <SkillCard 
+              title="Web Design" 
+              desc="Figma / Ps / Ai" 
+              icon={
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-16 h-16">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><circle cx="12" cy="12" r="3"/>
+                </svg>
+              } 
+            />
+            <SkillCard 
+              title="Developing" 
+              desc="HTML / CSS / JS" 
+              icon={
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-16 h-16">
+                  <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="12" y1="2" x2="12" y2="22"/>
+                </svg>
+              } 
+            />
+            <SkillCard 
+              title="Office" 
+              desc="Word / Excel / GAS" 
+              icon={
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-16 h-16">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
+                </svg>
+              } 
+            />
+            <SkillCard 
+              title="Game Unity" 
+              desc="Unity / Blender / C#" 
+              icon={
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-16 h-16">
+                  <rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h4M8 10v4"/><circle cx="15" cy="10" r="1"/><circle cx="18" cy="13" r="1"/>
+                </svg>
+              } 
+            />
           </div>
         </div>
       </div>
@@ -69,10 +101,12 @@ const ServiceItem: React.FC<{ text: string }> = ({ text }) => (
   </li>
 );
 
-const SkillCard: React.FC<{ title: string; desc: string; icon: string }> = ({ title, desc, icon }) => (
+const SkillCard: React.FC<{ title: string; desc: string; icon: React.ReactNode }> = ({ title, desc, icon }) => (
   <div className="text-center group cursor-default">
     <div className="mb-4 bg-white/10 aspect-square rounded-3xl flex items-center justify-center backdrop-blur-sm group-hover:bg-white/20 transition-all border border-white/20 shadow-inner overflow-hidden">
-      <span className="text-8xl transform group-hover:scale-110 transition-transform">{icon}</span>
+      <div className="text-white transform group-hover:scale-110 transition-transform duration-300">
+        {icon}
+      </div>
     </div>
     <h4 className="text-xl font-bold mb-2">{title}</h4>
     <p className="text-white/60 text-sm font-light">{desc}</p>
