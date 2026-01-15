@@ -37,8 +37,8 @@ const About: React.FC = () => {
           </div>
           <div className="order-1 lg:order-2 relative opacity-0 animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
             <div className="rounded-[60px] overflow-hidden border-none shadow-none">
-              <img 
-                src="images/事業所内部A型作業スペース.jpg" 
+              <img
+                src="images/DSCF1096.jpg"
                 alt="A型作業スペース"
                 className="w-full h-[550px] object-cover"
               />
@@ -49,17 +49,17 @@ const About: React.FC = () => {
 
         {/* Office Wide View */}
         <div className="mb-32 relative group opacity-0 animate-fadeInUp" style={{ animationDelay: '0.4s' }}>
-           <img 
-             src="images/事業所内部移行支援作業スペース.jpg" 
-             alt="移行支援作業スペース"
-             className="w-full h-[500px] object-cover rounded-[60px] grayscale-[20%] hover:grayscale-0 transition-all duration-700"
-           />
-           <div className="absolute bottom-10 left-10 bg-white/90 backdrop-blur-sm p-8 rounded-[30px] shadow-xl max-w-md hidden md:block">
-              <h4 className="text-xl font-bold text-[#287580] mb-3">Professional Workspace</h4>
-              <p className="text-sm text-gray-600 leading-loose font-medium">
-                落ち着いた配色の室内と最新の設備。クリエイティブな活動に没頭できる環境を追求しました。
-              </p>
-           </div>
+          <img
+            src="images/photo-5.jpg"
+            alt="移行支援作業スペース"
+            className="w-full h-[500px] object-cover rounded-[60px] grayscale-[20%] hover:grayscale-0 transition-all duration-700"
+          />
+          <div className="absolute bottom-10 left-10 bg-white/90 backdrop-blur-sm p-8 rounded-[30px] shadow-xl max-w-md hidden md:block">
+            <h4 className="text-xl font-bold text-[#287580] mb-3">Professional Workspace</h4>
+            <p className="text-sm text-gray-600 leading-loose font-medium">
+              落ち着いた配色の室内と最新の設備。クリエイティブな活動に没頭できる環境を追求しました。
+            </p>
+          </div>
         </div>
 
         {/* Profile Table */}
@@ -70,7 +70,7 @@ const About: React.FC = () => {
             </div>
             <h3 className="text-3xl font-bold text-gray-900">事業所概要</h3>
           </div>
-          
+
           <div className="bg-white rounded-[40px] overflow-hidden border border-white">
             <ProfileRow label="事業者名" value={metadata?.name || "GOGOマーリン"} />
             <ProfileRow label="運営会社" value={metadata?.contactInfo?.company || "sora合同会社"} />

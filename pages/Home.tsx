@@ -12,7 +12,7 @@ const Home: React.FC = () => {
             <div className="animate-reveal mb-6">
               <span className="text-[#287580] font-bold tracking-widest text-xs uppercase border-l-4 border-[#287580] pl-4 inline-block">IT-Focused Employment Support</span>
             </div>
-            
+
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-8 text-gray-900 tracking-tight">
               <div className="animate-reveal mb-2">
                 <span className="delay-100">デジタルの力で、</span>
@@ -21,7 +21,7 @@ const Home: React.FC = () => {
                 <span className="text-[#287580] delay-300">未来をデザイン。</span>
               </div>
             </h1>
-            
+
             <div className="animate-reveal mb-10 overflow-hidden">
               <p className="text-lg text-gray-600 max-w-lg leading-relaxed font-medium delay-500 opacity-0 animate-fadeInUp">
                 栃木県宇都宮市を拠点とするIT特化型の就労支援事業所。<br />
@@ -50,7 +50,7 @@ const Home: React.FC = () => {
           <div className="relative opacity-0 animate-fadeInUp" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
             <div className="aspect-square bg-gray-100 rounded-[50px] overflow-hidden rotate-2 transform hover:rotate-0 transition-transform duration-1000">
               <img
-                src="images/女性がPCの前に座りこちらに向かって笑っている.jpg" 
+                src="images/photo-1.jpg"
                 alt="スタッフ"
                 className="w-full h-full object-cover"
               />
@@ -104,18 +104,18 @@ const Home: React.FC = () => {
                 </p>
               </div>
               <div className="rounded-[40px] overflow-hidden h-64 border-none shadow-none">
-                <img 
-                  src="images/事業所入り口.jpg" 
-                  alt="事業所入り口" 
+                <img
+                  src="images/DSCF1082.jpg"
+                  alt="事業所入り口"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 />
               </div>
             </div>
             <div className="order-1 lg:order-2 opacity-0 animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
               <div className="rounded-[60px] overflow-hidden aspect-[4/5] border-none shadow-none">
-                <img 
-                  src="images/事業所内部入り口から見た写真.jpg" 
-                  alt="オフィス内部" 
+                <img
+                  src="images/DSCF1071.jpg"
+                  alt="オフィス内部"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -153,7 +153,7 @@ const Home: React.FC = () => {
 };
 
 const FeatureCard: React.FC<{ icon: React.ReactNode; title: string; description: string, delay?: string }> = ({ icon, title, description, delay }) => (
-  <div 
+  <div
     className="bg-white p-12 rounded-[40px] border border-gray-100 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group flex flex-col h-full opacity-0 animate-fadeInUp"
     style={{ animationDelay: delay, animationFillMode: 'forwards' }}
   >
