@@ -17,7 +17,7 @@ const Service: React.FC = () => {
         <div className="grid md:grid-cols-2 gap-12 mb-24">
           <div className="bg-white p-10 rounded-[40px] border-2 border-[#f0f7f8] shadow-xl hover:shadow-[#287580]/5 transition-all relative overflow-hidden group opacity-0 animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
             <div className="absolute top-0 right-0 bg-[#287580] text-white px-8 py-2 rounded-bl-3xl font-bold">就労継続支援A型</div>
-            <h3 className="text-2xl font-bold mb-6 text-gray-900">働く喜びを実感しながら<br /><span className="text-[#287580]">スキルアップ</span></h3>
+            <h2 className="text-2xl font-bold mb-6 text-gray-900">働く喜びを実感しながら<br /><span className="text-[#287580]">スキルアップ</span></h2>
             <p className="text-gray-600 mb-8 leading-relaxed">
               雇用契約を結び、実際の業務に携わりながらお給料を受け取るサービスです。
               実践的なIT業務を通じて、自立した生活と職業スキルの定着を目指します。
@@ -31,7 +31,7 @@ const Service: React.FC = () => {
 
           <div className="bg-[#f0f7f8] p-10 rounded-[40px] shadow-xl hover:shadow-[#287580]/5 transition-all relative overflow-hidden group opacity-0 animate-fadeInUp" style={{ animationDelay: '0.4s' }}>
             <div className="absolute top-0 right-0 bg-white text-[#287580] px-8 py-2 rounded-bl-3xl font-bold border-l border-b border-[#287580]/10">就労移行支援</div>
-            <h3 className="text-2xl font-bold mb-6 text-gray-900">一般企業への就職を<br /><span className="text-[#287580]">トータルサポート</span></h3>
+            <h2 className="text-2xl font-bold mb-6 text-gray-900">一般企業への就職を<br /><span className="text-[#287580]">トータルサポート</span></h2>
             <p className="text-gray-600 mb-8 leading-relaxed">
               一般企業への就職を目指す方に、スキルの習得から就職活動、定着支援までをワンストップで。
               あなたが希望するキャリアパスを描くためのお手伝いをします。

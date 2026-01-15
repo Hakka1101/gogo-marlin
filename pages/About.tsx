@@ -14,7 +14,7 @@ const About: React.FC = () => {
     <div className="pt-20 pb-32 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center py-16 mb-16 opacity-0 animate-fadeInUp">
-          <h2 className="text-[#287580] font-bold tracking-[0.3em] text-xs mb-4 uppercase">About Us</h2>
+          <p className="text-[#287580] font-bold tracking-[0.3em] text-xs mb-4 uppercase">About Us</p>
           <h1 className="text-5xl font-bold mb-6 text-gray-900">事業所について</h1>
           <div className="w-24 h-1.5 bg-[#287580] mx-auto rounded-full"></div>
         </div>

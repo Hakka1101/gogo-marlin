@@ -56,32 +56,32 @@ const Contact: React.FC = () => {
               <input type="hidden" name="form-name" value="contact" />
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-bold text-gray-700 mb-2">お名前 <span className="text-red-500">*</span></label>
-                  <input type="text" name="name" required className="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-[#287580] focus:outline-none transition-all" placeholder="山田 太郎" />
+                  <label htmlFor="name" className="block text-sm font-bold text-gray-700 mb-2">お名前 <span className="text-red-500">*</span></label>
+                  <input type="text" id="name" name="name" required className="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-[#287580] focus:outline-none transition-all" placeholder="山田 太郎" />
                 </div>
                 <div>
-                  <label className="block text-sm font-bold text-gray-700 mb-2">ふりがな</label>
-                  <input type="text" name="kana" className="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-[#287580] focus:outline-none transition-all" placeholder="やまだ たろう" />
+                  <label htmlFor="kana" className="block text-sm font-bold text-gray-700 mb-2">ふりがな</label>
+                  <input type="text" id="kana" name="kana" className="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-[#287580] focus:outline-none transition-all" placeholder="やまだ たろう" />
                 </div>
               </div>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-bold text-gray-700 mb-2">メールアドレス <span className="text-red-500">*</span></label>
-                  <input type="email" name="email" required className="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-[#287580] focus:outline-none transition-all" placeholder="example@mail.com" />
+                  <label htmlFor="email" className="block text-sm font-bold text-gray-700 mb-2">メールアドレス <span className="text-red-500">*</span></label>
+                  <input type="email" id="email" name="email" required className="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-[#287580] focus:outline-none transition-all" placeholder="example@mail.com" />
                 </div>
                 <div>
-                  <label className="block text-sm font-bold text-gray-700 mb-2">電話番号</label>
-                  <input type="tel" name="phone" className="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-[#287580] focus:outline-none transition-all" placeholder="090-1234-5678" />
+                  <label htmlFor="phone" className="block text-sm font-bold text-gray-700 mb-2">電話番号</label>
+                  <input type="tel" id="phone" name="phone" className="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-[#287580] focus:outline-none transition-all" placeholder="090-1234-5678" />
                 </div>
               </div>
               <div>
-                <label className="block text-sm font-bold text-gray-700 mb-2">お問い合わせ内容</label>
-                <select name="type" className="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-[#287580] focus:outline-none transition-all mb-4">
+                <label htmlFor="type" className="block text-sm font-bold text-gray-700 mb-2">お問い合わせ内容</label>
+                <select id="type" name="type" className="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-[#287580] focus:outline-none transition-all mb-4">
                   <option value="見学希望">見学・体験を希望</option>
                   <option value="相談希望">相談のみを希望</option>
                   <option value="その他">その他</option>
                 </select>
-                <textarea name="message" rows={5} required className="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-[#287580] focus:outline-none transition-all" placeholder="現在の状況や、気になることなどご自由にご記入ください。"></textarea>
+                <textarea id="message" name="message" rows={5} required className="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-[#287580] focus:outline-none transition-all" placeholder="現在の状況や、気になることなどご自由にご記入ください。"></textarea>
               </div>
               <button type="submit" className="w-full py-5 bg-[#287580] text-white font-bold rounded-2xl hover:bg-[#1e5a63] transition-all transform hover:shadow-xl flex items-center justify-center space-x-2">
                 <span>送信する</span>
